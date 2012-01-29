@@ -19,7 +19,7 @@ GET     /public/                                staticDir:public
 *      /insert/{name}/{url}                    JavaScript.insert
 
 # CrudSiena
-*    /admin    									module:crudsiena
+*    /moi    									module:crudsiena
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
