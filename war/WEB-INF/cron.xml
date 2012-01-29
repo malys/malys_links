@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/Cron/Send</url>
+		<description>Link Me Send</description>
+		<schedule>every 2 hours</schedule>
+	</cron>
+	<cron>
+		<url>/Cron/Clean</url>
+		<description>Link Me Clean</description>
+		<schedule>every day 00:00</schedule>
+	</cron>
+</cronentries>
