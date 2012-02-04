@@ -38,15 +38,19 @@ public class Cron extends Controller {
     		Iterator<Link> iterLink= listLink.iterator();
         	while(iterLink.hasNext()){
         		Link link = iterLink.next();
-        		body  = body +"\n"+ "<a href=\""+ link.url +  "\">" +  link.url  + "</a>";
-        		link.isModified = false;
+        		Logger.debug("send " + contact.firstName + " " + link.url );
+        	//	body  = body +"\n"+ "<a href=\""+ link.url +  "\">" +  link.url  + "</a>";
+        		body  = body +"\n"+ link.url + "\n";
+        		link.isModified = true;
         		link.save();
         	}
+        	
+        	body  = body +"\nEnjoy this links.\n\n Regargs,\nLink Me First by Malys";
         	
         	if(body.length()>0){
         		sendEmail(body,contact.emailAddress);
         	}
-        	
+      	
     	}
     }
     
@@ -65,9 +69,8 @@ public class Cron extends Controller {
     }
     
     
-    
-    
-    
+      
+  
     
     private static  void sendEmail(String body,String email){
     	try {
@@ -80,8 +83,8 @@ public class Cron extends Controller {
 			msg.setFrom(new InternetAddress("domino0028@gmail.com"));
 
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					email, "Servidor de Noticias"));
-			msg.setSubject("Noticias");
+					email, "LinkMeFirst:"));
+			msg.setSubject("Enlacitos");
 			msg.setText(body);
 			Transport.send(msg);
 			Logger.info("Envoi: "+body);

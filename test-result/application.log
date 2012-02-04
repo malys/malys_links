@@ -1,0 +1,21 @@
+29 janv. 2012 16:20:01,806 INFO  ~ Starting F:\workspace\linkme\.
+29 janv. 2012 16:20:01,806 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.gae)
+29 janv. 2012 16:20:01,806 INFO  ~ Module gae is available (F:\prog\play-1.2.1\modules\gae-1.6.0)
+29 janv. 2012 16:20:01,806 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.siena)
+29 janv. 2012 16:20:01,806 INFO  ~ Module siena is available (F:\prog\play-1.2.1\modules\siena-2.0.6)
+29 janv. 2012 16:20:01,806 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.crudsiena)
+29 janv. 2012 16:20:01,806 INFO  ~ Module crudsiena is available (F:\prog\play-1.2.1\modules\crudsiena-2.0.2)
+29 janv. 2012 16:20:02,853 WARN  ~ 
+29 janv. 2012 16:20:02,853 WARN  ~ Google App Engine module
+29 janv. 2012 16:20:02,853 WARN  ~ ~~~~~~~~~~~~~~~~~~~~~~~
+29 janv. 2012 16:20:02,853 WARN  ~ No Google App Engine environment found. Setting up a development environement
+29 janv. 2012 16:20:02,884 WARN  ~ Don't forget to define your GAE application id in the 'war/WEB-INF/appengine-web.xml' file
+29 janv. 2012 16:20:02,884 WARN  ~ 
+29 janv. 2012 16:20:02,884 WARN  ~ You're running Play! in DEV mode
+29 janv. 2012 16:20:07,228 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+29 janv. 2012 16:20:07,228 INFO  ~ GAE environment detected
+29 janv. 2012 16:20:07,259 INFO  ~ Siena DB Type: sql:h2:mysql
+29 janv. 2012 16:20:07,540 INFO  ~ Table links needs to be added
+29 janv. 2012 16:20:07,556 INFO  ~ Table contacts needs to be added
+29 janv. 2012 16:20:07,619 INFO  ~ Executed 3 SQL command(s) with 0 error(s)
+29 janv. 2012 16:20:07,775 INFO  ~ Application 'Link Me' is now started !

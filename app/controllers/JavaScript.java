@@ -40,7 +40,7 @@ public class JavaScript extends Controller {
 		Contact contact = Contact.getByFirstName(name);
 		if (contact != null) {
 			Link link = new Link(url, contact);
-			Logger.info("Add + " +  url.toString() );
+			Logger.info("Add " +  url.toString() + " for " + contact.firstName );
 			link.save();
 		}
 	}

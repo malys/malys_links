@@ -48,8 +48,9 @@ public class Link extends siena.Model {
     
     public Link(String url,Contact contact){
     	this.url = url.replace("@","/");
-    	isModified = true;
+    	isModified = false;
     	created = Calendar.getInstance().getTime();
+    	this.contact = contact;
     	
     }
     
