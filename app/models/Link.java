@@ -81,7 +81,7 @@ public class Link extends siena.Model {
     }
     
     public static List<Link> getByNotModified(Contact contact){
-    	return all().filter("isModified", true).filter("contact", contact).fetch();
+    	return all().filter("isModified", false).filter("contact", contact).fetch();
     	
     	
     }
