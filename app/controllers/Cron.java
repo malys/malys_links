@@ -42,10 +42,10 @@ public class Cron extends Controller {
 				link.save();
 			}
 
-			body = body
-					+ "\nEnjoy this links.\n\nRegards,\n	Link Me First by Malys";
-
 			if (body.length() > 0) {
+				body = body
+						+ "\nEnjoy this links.\n\nRegards,\n	Link Me First by Malys";
+
 				sendEmail(body, contact.emailAddress);
 			}
 
