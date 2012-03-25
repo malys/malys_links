@@ -34,10 +34,14 @@ public class Cron extends Controller {
 			Iterator<Link> iterLink = listLink.iterator();
 			while (iterLink.hasNext()) {
 				Link link = iterLink.next();
-				Logger.debug("send " + contact.firstName + " " + link.url);
-				// body = body +"\n"+ "<a href=\""+ link.url + "\">" + link.url
-				// + "</a>";
-				body = body + "\n" + link.url + "\n";
+				if (link.url.toUpperCase().indexOf("blank") > -1) {
+					Logger.debug("send " + contact.firstName + " " + link.url);
+					// body = body +"\n"+ "<a href=\""+ link.url + "\">" +
+					// link.url
+					// + "</a>";
+					body = body + "\n" + link.url + "\n";
+				}
+
 				link.isModified = true;
 				link.save();
 			}
