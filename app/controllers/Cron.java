@@ -34,7 +34,7 @@ public class Cron extends Controller {
 			Iterator<Link> iterLink = listLink.iterator();
 			while (iterLink.hasNext()) {
 				Link link = iterLink.next();
-				if (link.url.toUpperCase().indexOf("blank") > -1) {
+				if (link.url.toUpperCase().indexOf("blank") == -1) {
 					Logger.debug("send " + contact.firstName + " " + link.url);
 					// body = body +"\n"+ "<a href=\""+ link.url + "\">" +
 					// link.url
