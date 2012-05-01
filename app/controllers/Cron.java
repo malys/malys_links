@@ -77,10 +77,10 @@ public class Cron extends Controller {
 			Message msg = new MimeMessage(session);
 			msg.setContent(body, "text/html; charset=ISO-8859-1");
 
-			msg.setFrom(new InternetAddress("domino0028@gmail.com"));
+			msg.setFrom(new InternetAddress("XXXXXXXXXXXXX"));
 
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					email, "LinkMeFirst:"));
+					email, "XXXXXXXX:"));
 			msg.setSubject("Enlacitos");
 			msg.setText(body);
 			Transport.send(msg);

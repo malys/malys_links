@@ -3,4 +3,4 @@ F:\prog\play-1.2.1\play run
 
 
 
-javascript:function%20iprl5(){var%20d=document,b=d.body;try{if(!b)throw(0);d.title='%20'+d.title;open('http:'+'//jobfilters.appspot.com/insert/sylvain/'+encodeURIComponent(d.location.href.replace(/\//g,'@')));alert(d.location.href%20)}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)
+javascript:function%20iprl5(){var%20d=document,b=d.body;try{if(!b)throw(0);d.title='%20'+d.title;open('http:'+'//XXXXXXXX/insert/XXXXXXXXXX/'+encodeURIComponent(d.location.href.replace(/\//g,'@')));alert(d.location.href%20)}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)

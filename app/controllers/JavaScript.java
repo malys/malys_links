@@ -11,37 +11,6 @@ public class JavaScript extends Controller {
 		render();
 	}
 
-	public static void init() {
-		Contact contact = Contact.getByFirstName("sylvain");
-		if (contact == null) {
-			contact = new Contact("sylvain", "s.malnuit@libertysurf.fr");
-			contact.save();
-			Logger.info("Add + " + contact.toString());
-		}
-
-		contact = Contact.getByFirstName("eva");
-		if (contact == null) {
-			contact = new Contact("eva", "evammoll@gmail.com");
-			contact.save();
-			Logger.info("Add + " + contact.toString());
-		}
-
-		contact = Contact.getByFirstName("cris");
-		if (contact == null) {
-			contact = new Contact("cris", "eire2410@gmail.com");
-			contact.save();
-			Logger.info("Add + " + contact.toString());
-		}
-
-		contact = Contact.getByFirstName("sage");
-		if (contact == null) {
-			contact = new Contact("sage", "sylvain.malnuit@sage.com");
-			contact.save();
-			Logger.info("Add + " + contact.toString());
-		}
-
-	}
-
 	public static void insert(String name, String url) {
 		Contact contact = Contact.getByFirstName(name);
 		if (contact != null) {
