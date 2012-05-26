@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -25,6 +26,9 @@ public class Cron extends Controller {
 	 */
 	public static void send() {
 
+		SimpleDateFormat format = new SimpleDateFormat(
+				"yyyy.MM.dd G 'at' HH:mm");
+
 		List<Contact> list = Contact.all().fetch();
 		Iterator<Contact> iter = list.iterator();
 		while (iter.hasNext()) {
@@ -39,7 +43,8 @@ public class Cron extends Controller {
 					// body = body +"\n"+ "<a href=\""+ link.url + "\">" +
 					// link.url
 					// + "</a>";
-					body = body + "\n" + link.url + "\n";
+					body = body + "\n" + link.url + " - "
+							+ format.format(link.created) + "\n";
 				}
 
 				link.isModified = true;
@@ -47,8 +52,7 @@ public class Cron extends Controller {
 			}
 
 			if (body.length() > 0) {
-				body = body
-						+ "\nEnjoy this links.\n\nRegards,\n	Link Me First by Malys";
+				body = body + "\nEnjoy this links.\n\nRegards,\n	";
 
 				sendEmail(body, contact.emailAddress);
 			}

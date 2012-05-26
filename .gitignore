@@ -3,3 +3,4 @@ eclipse/classes/*
 precompiled/*
 war/WEB-INF/appengine-generated/datastore-indexes-auto.xml
 test-result/application.log
+war/
