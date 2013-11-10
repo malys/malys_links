@@ -1,6 +1,5 @@
 package controllers;
 
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
@@ -44,7 +43,11 @@ public class Cron extends Controller {
 					// link.url
 					// + "</a>";
 					body = body + "\n" + link.url + " - "
-							+ format.format(link.created) + "\n";
+							+ format.format(link.created) + "\n		";
+					if (link.comment != null) {
+						body += link.comment;
+					}
+
 				}
 
 				link.isModified = true;
@@ -81,10 +84,10 @@ public class Cron extends Controller {
 			Message msg = new MimeMessage(session);
 			msg.setContent(body, "text/html; charset=ISO-8859-1");
 
-			msg.setFrom(new InternetAddress("XXXXXXXXXXXXX"));
+			msg.setFrom(new InternetAddress("domino0028@gmail.com"));
 
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					email, "XXXXXXXX:"));
+					email));
 			msg.setSubject("Enlacitos");
 			msg.setText(body);
 			Transport.send(msg);
@@ -93,8 +96,6 @@ public class Cron extends Controller {
 		} catch (AddressException e) {
 			Logger.error(e.getMessage());
 		} catch (MessagingException e) {
-			Logger.error(e.getMessage());
-		} catch (UnsupportedEncodingException e) {
 			Logger.error(e.getMessage());
 		}
 

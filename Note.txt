@@ -1,6 +1,33 @@
-F:\prog\play-1.2.1\play gae:deploy --gae=F:/prog/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.6.1.v201201120043r36/appengine-java-sdk-1.6.1
-F:\prog\play-1.2.1\play run
+B:\prog\play-1.2.3\play gae:deploy --gae=B:/prog/eclipse/jee/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.4/appengine-java-sdk-1.8.4
+B:\prog\play-1.2.3\play run
 
+B:\prog\play-1.2.3\play install 'module'
+
+B:\prog\play-1.2.3\play eclipsify 'repertoire'
+
+javascript:(function(){try{var root="https://linkmefirst.appspot.com";var linkMeFirstKey="sylvain";if(!document.body)throw 0;var linkmefirst=document.createElement("SCRIPT");linkmefirst.type="text/javascript";linkmefirst.id="linkMeFirstJs";linkmefirst.src=root+"/public/javascripts/linkMeFirst.js?key="+linkMeFirstKey;document.getElementsByTagName("head")[0].appendChild(linkmefirst)}catch(e){alert("Please wait until the page has loaded.")}})();
+
+
+javascript: (function () {
+    try {
+        var root = 'https://linkmefirst.appspot.com';
+        var linkMeFirstKey = 'sylvain';
+        if (!document.body) throw (0);
+        //        document.title = '' + document.title;
+        var linkmefirst = document.createElement('SCRIPT');
+        linkmefirst.type = 'text/javascript';
+        linkmefirst.id="linkMeFirstJs";
+        linkmefirst.src = root + '/public/javascripts/linkMeFirst.js?key=' + linkMeFirstKey;
+        document.getElementsByTagName('head')[0].appendChild(linkmefirst);
+
+        // alert(document.location.href + ' sent');
+    } catch (e) {
+        alert('Please wait until the page has loaded.');
+    }
+
+
+
+})();
 
 
 javascript:function%20iprl5(){var%20d=document,b=d.body;try{if(!b)throw(0);d.title='%20'+d.title;open('http:'+'//XXXXXXXX/insert/XXXXXXXXXX/'+encodeURIComponent(d.location.href.replace(/\//g,'@')));alert(d.location.href%20)}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)
