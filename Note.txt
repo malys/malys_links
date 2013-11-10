@@ -5,13 +5,10 @@ B:\prog\play-1.2.3\play install 'module'
 
 B:\prog\play-1.2.3\play eclipsify 'repertoire'
 
-javascript:(function(){try{var root="https://linkmefirst.appspot.com";var linkMeFirstKey="sylvain";if(!document.body)throw 0;var linkmefirst=document.createElement("SCRIPT");linkmefirst.type="text/javascript";linkmefirst.id="linkMeFirstJs";linkmefirst.src=root+"/public/javascripts/linkMeFirst.js?key="+linkMeFirstKey;document.getElementsByTagName("head")[0].appendChild(linkmefirst)}catch(e){alert("Please wait until the page has loaded.")}})();
-
-
 javascript: (function () {
     try {
-        var root = 'https://linkmefirst.appspot.com';
-        var linkMeFirstKey = 'sylvain';
+        var root = 'https://XXXXXXXXXX';
+        var linkMeFirstKey = 'XXXXXXXX';
         if (!document.body) throw (0);
         //        document.title = '' + document.title;
         var linkmefirst = document.createElement('SCRIPT');
