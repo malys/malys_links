@@ -12,11 +12,10 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
-#Add new URL
 *      /init                  					JavaScript.init
-
-#Add new URL
-*      /insert/{name}/{url}                    JavaScript.insert
+GET    /insert/{name}/{url}                    	JavaScript.insert
+GET    /links/{name}		                    JavaScript.getModifiedUrls
+POST   /insert                   				JavaScript.insertPOST
 
 # CrudSiena
 *    /moi    									module:crudsiena

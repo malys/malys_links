@@ -1,0 +1,16 @@
+.linkMeFirst {
+    border:solid 5px #000000;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: fixed;
+    _position: absolute;
+	top: 0; 
+	right: 0; 
+    width: 570px;
+    height: 120px;
+    z-index: 10000000;
+    margin: 0;
+    padding: 0;
+    background: #3b3636;
+}

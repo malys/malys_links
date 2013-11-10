@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>LinkMeFirst</title>
+<!-- Stylesheets -->
+<script type="text/javascript">
+		function getParameter() {
+		    // Parse the querystring into arguments and parameters
+		    var vars = document.URL.split('?')[1].split("&");
+		    var args = {};
+		    for (var i = 0; i < vars.length; i++) {
+		        var pair = vars[i].split("=");
+		        // decodeURI doesn't expand "+" to a space.
+		        args[pair[0]] = decodeURI(pair[1]).replace(/\+/g, ' ');
+		    }
+		    return args;
+		}
+		
+        function submitForm() {     
+        	              
+           window.setTimeout(function(){
+            	var values = getParameter();  
+                parent.window.location.href=decodeURIComponent(values.url);
+            }
+            ,500);
+
+           document.linkMeFirstForm.submit();
+        }   
+
+        function init() {
+            var values = getParameter();
+            document.getElementById('linkMeFirstKey').value = values.key;
+            document.getElementById('linkMeFirstURL').value = values.url;
+        } 
+    </script>
+</head>
+
+
+<body onLoad="init()">
+
+	<div id="form">
+		<h3 style="color: #FFFFFF;">Ajout d'un commentaire</h3>
+		<form name="linkMeFirstForm" METHOD="POST" ACTION="/insert"
+			ENCTYPE="x-www-form-urlencoded">
+			<p>
+				<input name="name" id="linkMeFirstKey" size="64" type="hidden"
+					value=""> <input name="url" id="linkMeFirstURL" size="64"
+					type="hidden" value="">
+				<textarea name="comment" id="linkMeFirstComment" rows="5" cols="64"
+					placeholder="Veuillez entrer votre commentaire"></textarea>
+
+				<input type="button" onClick="submitForm();" value="Envoyer" />
+			</p>
+
+		</form>
+
+	</div>
+
+</body>
+
+</html>
